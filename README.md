@@ -1,4 +1,4 @@
-# Marlin 3D Printer Firmware for Proforge
+# Marlin 3D Printer Firmware for ProForge 3
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
 ![GitHub contributors](https://img.shields.io/github/contributors/marlinfirmware/marlin.svg)
@@ -17,6 +17,7 @@ The base of this firmware was the SKR Marlin Firmware from BTT (https://github.c
 
 All Changes made in the Firmware were tagged with "//Proforge" and maybe a short description, depending on the text.
 
+You can find the firmware of the touchscreen here:
 https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware#firmware-update
 
 ## License
