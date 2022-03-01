@@ -486,7 +486,7 @@
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  *
  */
-#define TEMP_SENSOR_0 1
+#define TEMP_SENSOR_0 66 //Proforge E0 PT100 Thermistor
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -555,8 +555,8 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 320 //Proforge: Standard: 275
-#define HEATER_1_MAXTEMP 320 //Proforge: Standard: 275
+#define HEATER_0_MAXTEMP 400 //Proforge: Standard: 275
+#define HEATER_1_MAXTEMP 400 //Proforge: Standard: 275
 #define HEATER_2_MAXTEMP 320 //Proforge: Standard: 275
 #define HEATER_3_MAXTEMP 320 //Proforge: Standard: 275
 #define HEATER_4_MAXTEMP 320 //Proforge: Standard: 275
@@ -600,9 +600,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  22.20
-    #define DEFAULT_Ki   1.08
-    #define DEFAULT_Kd 114.00
+    #define DEFAULT_Kp  14.0 //Proforge: Default 22.20
+    #define DEFAULT_Ki  0.5 //Proforge: Default 1.08
+    #define DEFAULT_Kd 125.0 //Proforge: Default 114.00
   #endif
 #endif // PIDTEMP
 
@@ -749,10 +749,10 @@
 
 // Enable one of the options below for CoreXY, CoreXZ, or CoreYZ kinematics,
 // either in the usual order or reversed
-#define COREXY //ProForge
+//#define COREXY
 //#define COREXZ
 //#define COREYZ
-//#define COREYX
+#define COREYX //ProForge
 //#define COREZX
 //#define COREZY
 //#define MARKFORGED_XY  // MarkForged. See https://reprap.org/forum/read.php?152,504042
@@ -926,7 +926,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 96 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 40, 40, 800, 96 } //Proforge
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1329,9 +1329,9 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR false
-#define INVERT_Y_DIR true
-#define INVERT_Z_DIR false
+#define INVERT_X_DIR true //Proforge
+#define INVERT_Y_DIR false //Proforge
+#define INVERT_Z_DIR true //Proforge
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
 //#define INVERT_K_DIR false
